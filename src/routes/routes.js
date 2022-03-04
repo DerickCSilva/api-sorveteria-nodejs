@@ -8,7 +8,7 @@ let IceCreamController = require("../controllers/IceCreamController");
 const authentication = require('../middlewares/auth');
 
 // GET's
-router.get('/icecream', IceCreamController.getAll);
+router.get('/icecreams', IceCreamController.getAll);
 router.get('/icecream/:id', IceCreamController.getById);
 
 // POST's

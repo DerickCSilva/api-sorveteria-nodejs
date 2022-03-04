@@ -28,6 +28,6 @@ app.use(morgan('dev'));
 app.use('/api', routes);
 
 // Listen on port 3000
-app.listen(3000, () => {
+app.listen(process.env.PORT || 3000, () => {
     setTimeout(() => console.log('Backend running on port 3000 🚀...'), 800);
 });

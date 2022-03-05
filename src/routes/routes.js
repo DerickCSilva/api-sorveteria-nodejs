@@ -18,6 +18,6 @@ router.post('/icecream', authentication, IceCreamController.create);
 router.put('/icecream', authentication, IceCreamController.edit);
 
 // DELETE's
-router.delete('/icecream', authentication, IceCreamController.delete);
+router.delete('/icecream/:id', authentication, IceCreamController.delete);
 
 module.exports = router;

@@ -11,6 +11,7 @@ const routes = require('./src/routes/routes');
 
 // Models
 const IceCream = require('./src/models/IceCream');
+const Budget = require('./src/models/Budget');
 
 // Body parser
 app.use(express.json());

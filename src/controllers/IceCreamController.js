@@ -126,10 +126,10 @@ class IceCreamController {
             let quantityPromo = totalPromo.reduce((total, num) => total + num);
 
             let quantityBought = totalInvested.reduce((total, num) => total + num);
-            totalInvested = (quantityBought - quantityPromo) * priceCostPopsicle;
+            totalInvested = quantityBought * priceCostPopsicle;
 
             let quantitySold = totalSold.reduce((total, num) => total + num);
-            totalSold = (quantitySold - quantityPromo) * priceSellPopsicle;
+            totalSold = quantitySold * priceSellPopsicle;
 
             let totalProfit = totalSold - totalInvested;
 

@@ -141,7 +141,7 @@ class IceCreamController {
                 priceCostPopsicle,
                 priceSellPopsicle,
                 metricsValues: [totalInvested, totalSold, totalProfit],
-                metricsQuantity: [quantityBought, quantitySold, quantityBought],
+                metricsQuantity: [quantityBought, quantitySold, quantitySold],
                 message: 'Busca realizada com sucesso.'
             });
         } catch (err) {

@@ -122,7 +122,6 @@ class IceCreamController {
                 }
             });
 
-            
             let quantityPromo = totalPromo.reduce((total, num) => total + num);
 
             let quantityBought = totalInvested.reduce((total, num) => total + num);
@@ -141,7 +140,8 @@ class IceCreamController {
                 quantitySold,
                 priceCostPopsicle,
                 priceSellPopsicle,
-                metrics: [totalInvested, totalSold, totalProfit],
+                metricsValues: [totalInvested, totalSold, totalProfit],
+                metricsQuantity: [quantityBought, quantitySold, quantityBought],
                 message: 'Busca realizada com sucesso.'
             });
         } catch (err) {

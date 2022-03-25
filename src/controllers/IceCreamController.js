@@ -123,11 +123,11 @@ class IceCreamController {
             });
 
             let quantityPromo = totalPromo.reduce((total, num) => total + num);
-
             let quantityBought = totalInvested.reduce((total, num) => total + num);
+            let quantitySold = totalSold.reduce((total, num) => total + num);
+
             totalInvested = quantityBought * priceCostPopsicle;
 
-            let quantitySold = totalSold.reduce((total, num) => total + num);
             totalSold = quantitySold * priceSellPopsicle;
 
             let totalProfit = totalSold - totalInvested;
@@ -141,7 +141,7 @@ class IceCreamController {
                 priceCostPopsicle,
                 priceSellPopsicle,
                 metricsValues: [totalInvested, totalSold, totalProfit],
-                metricsQuantity: [quantityBought, quantitySold, quantitySold],
+                metricsQuantity: [quantityBought, (quantitySold + quantityPromo) - 1, (quantitySold + quantityPromo) - 1],
                 message: 'Busca realizada com sucesso.'
             });
         } catch (err) {
